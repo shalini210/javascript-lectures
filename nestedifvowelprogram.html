@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function chk()
+        {
+            var k = document.getElementById("txt1").value;
+            if(k=='a' || k=='A')
+            {
+                document.getElementById("hresult").innerHTML ="Vowel";
+            }
+            else
+            {
+                if(k=='e' || k=='E')
+                {
+                document.getElementById("hresult").innerHTML ="Vowel";
+                }   
+                else
+                {
+                    if(k=='i' || k=='I')
+                    {
+                        document.getElementById("hresult").innerHTML ="Vowel";
+                    }
+                    else
+                    {
+                        if(k=='o' || k=='O')
+                        {
+                            document.getElementById("hresult").innerHTML ="Vowel";
+                        }
+                        else
+                        {
+                            if(k=='u'|| k=='U')
+                            {
+                                document.getElementById("hresult").innerHTML ="Vowel";
+                            }
+                            else
+                            {
+                                document.getElementById("hresult").innerHTML ="Consonent";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Enter any alphabate:
+        <input type="text" id="txt1">
+        <input type="button" value="Click here " onclick="chk();">
+    </p>
+    <h1 id="hresult"></h1>
+    
+</body>
+</html>

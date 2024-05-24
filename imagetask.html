@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box
+        {
+            /* background-image: url("images/happy.png"); */
+        }
+    </style>
+    <script>
+        function changeimg()
+        {
+            console.log(document.getElementById("i1").src);
+            if(document.getElementById("i1").src=="images/happy.png")
+            {
+                document.getElementById("i1").src="images/sad.png";
+            }
+            else
+            {
+                document.getElementById("i1").src="images/happy.png";
+            }
+        }
+        function changeimg1()
+        {
+            var b = document.getElementById("box");
+            console.log(b.style.backgroundImage)
+            if(b.style.backgroundImage=='url("images/happy.png")')
+            {
+                console.log("inside if ");
+                b.style.backgroundImage ='url("images/sad.png")';
+                console.log(b.style.backgroundImage)
+            }
+            else
+            {
+                console.log("inslise else")
+                b.style.backgroundImage='url("images/happy.png")';
+            }
+        }
+    </script>
+</head>
+<body>
+    <img id="i1" src="images/happy.png" onclick="changeimg()"/>
+
+    <div 
+     id="box" style="height: 200px;width:200px ;" onclick="changeimg1();">
+
+    </div>
+</body>
+</html>

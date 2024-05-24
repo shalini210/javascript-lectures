@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1
+        {
+           
+        }
+    </style>
+    <script>
+        function changeBG(x)
+        {
+         
+            if(x==0)
+            {
+            document.getElementById("box1").style.backgroundColor="yellow";
+            }
+            else
+            {
+                document.getElementById("box1").style.backgroundColor="red";
+            }
+        }      
+        function increaseSize()
+        {
+            var h ;
+            h=document.getElementById("box1");
+            switch (h.style.width) {
+                case "100px":
+                    h.style.width="150px";
+                    h.style.height="150px";
+                    break;
+                    case "150px":
+                    h.style.width="200px";
+                    h.style.height="200px";
+                    break;
+                    case "200px":
+                    h.style.width="250px";
+                    h.style.height="250px";
+                    break;
+                    case "250px":
+                    h.style.width="300px";
+                    h.style.height="300px";
+                    break;
+                default:
+                    h.style.width="100px";
+                    h.style.height="100px";
+                    break;
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    <div id="box1"  style=" height:100px;
+    width:100px;
+    background-color: red;"
+    onmouseover="changeBG(0)" onmouseout="changeBG(1)" onclick="increaseSize()">
+
+    </div>
+</body>
+
+</html>

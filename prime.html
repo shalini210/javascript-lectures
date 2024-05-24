@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function findPrime()
+        {
+            var n = parseInt(document.getElementById("txt1").value);
+            var i;
+            for(i=2;i<n;i++)
+            {
+                if(n%i==0)
+                {break;}
+            }
+            if(i==n)
+            {
+            document.getElementById("hresult").innerHTML=  "Prime no ";
+            document.getElementById("hresult").style.color=  "green ";
+            }
+            else
+            {
+                document.getElementById("hresult").innerHTML=  " not Prime no ";
+                document.getElementById("hresult").style.color=  "red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txt1">
+    <input type="button" value="find Prime" onclick="findPrime();">
+    <input type="button" value="find Odd/even" onclick="">
+    <h1 id="hresult"></h1>
+</body>
+</html>

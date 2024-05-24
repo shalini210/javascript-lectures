@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="button"]
+        {
+            height: 50px;
+            width:50px;
+        }
+        @keyframes animate_ballons {
+                0%{margin-top:500px}
+                
+                100%{margin-top:10px;}
+        }
+        .ballon
+        {
+            animation-name: animate_ballons;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            margin-left:5px;
+ transform: rotate(45deg);
+  height: 100px;width:100px;
+  background-color:red ;
+  border-bottom-left-radius:50%;
+  border-top-left-radius:50%;border-top-right-radius:50%
+        }
+    </style>
+    <script>
+        function changeColor(colorName)
+        {            
+            document.getElementById("b1").style.backgroundColor=colorName;
+        }     
+        function burst(d)
+        {
+            d.style.display="none";
+        }
+    </script>
+</head>
+<body id="b1">
+    <input type="button" style="background-color: red;" onclick="changeColor('red');">
+    <input type="button" style="background-color: green;" onclick="changeColor('green');">
+    <input type="button" style="background-color:yellow;" onclick="changeColor('yellow');">
+    <input type="button" style="background-color: rgb(203, 35, 212);"
+     onclick="changeColor('rgb(203, 35, 212)');">
+    <input type="button" style="background-color: rgb(202, 29, 29);" 
+    onclick="changeColor('rgb(202, 29, 29)');">
+    <input type="button" style="background-color:rgb(238, 181, 23);"
+     onclick="changeColor('rgb(238, 181, 23)');">
+     <input type="button" value="+">
+     <input type="button" value="++">
+     <input type="button" value="+++">
+
+     <div style="display: flex;">
+ <div class="ballon" onclick="burst(this);">
+ </div>
+ <div class="ballon" style="background-color: pink;animation-delay: 55ms;"  onclick="burst(this);">
+
+</div>
+</div>
+</body>
+</html>

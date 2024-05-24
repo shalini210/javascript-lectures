@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function showdata(){
+                var n  = parseInt(document.getElementById("txt1").value);
+                var n1=0,n2=1,n3;
+                var heading = document.getElementById("hresult");
+                heading.innerHTML="";
+                heading.innerHTML = "0  1  ";
+
+                for(var i = 1;i<n-1;i++)
+                {
+                    n3=n1+n2;
+                   heading.innerHTML+= " "+n3;
+                   n1=n2;
+                   n2=n3;
+                }        
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Enter no : 
+        <input type="text" id="txt1">
+    </p>
+    <input type = "button" value="Show " onclick="showdata();"/>
+    <h1 id="hresult"></h1>
+</body>
+</html>

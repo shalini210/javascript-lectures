@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hello()
+        {
+            var a,b,c;
+            a=document.getElementById("txt1").value;
+            b=document.getElementById("txt2").value;
+            c = parseInt(a)+parseInt(b);
+            document.getElementById("hd1").innerHTML ="sum is " + c;
+            document.getElementById("txt2").value="";
+            document.getElementById("txt1").value="";
+        }
+        function gm()
+        {
+            alert("good morning");
+        }       
+    </script>
+</head>
+<body>
+    <p>Enter a : <input type="text" id="txt1" ></p>
+    <p>Enter b : <input type="text" id="txt2" ></p>
+    <input type="button" value="+ " onclick="hello();" />
+    <h1 id="hd1">
+    </h1>
+</body>
+</html>

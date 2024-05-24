@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printDigits(x)
+        {
+            var r,c ;
+            document.getElementById("p1").innerHTML="";
+            switch (x) {
+                case 1:
+                            for(r=1;r<=5;r++)
+                        {
+                            for(c=1;c<=5;c++)
+                            {
+                                document.getElementById("p1").innerHTML+= c+" ";
+                            }
+                            document.getElementById("p1").innerHTML+="<br>";            
+                        }        
+                    break;
+                    case 2:
+                            for(r=1;r<=5;r++)
+                        {
+                            for(c=5;c>=1;c--)
+                            {
+                                document.getElementById("p1").innerHTML+= c+" ";
+                            }
+                            document.getElementById("p1").innerHTML+="<br>";            
+                        }        
+                    break;
+                    case 3:
+                            for(r=1;r<=5;r++)
+                        {
+                            for(c=1;c<=5;c++)
+                            {
+                                document.getElementById("p1").innerHTML+= r+" ";
+                            }
+                            document.getElementById("p1").innerHTML+="<br>";            
+                        }        
+                    break;
+                    case 4:
+                            for(r=5;r>=1;r--)
+                        {
+                            for(c=1;c<=5;c++)
+                            {
+                                document.getElementById("p1").innerHTML+= r+" ";
+                            }
+                            document.getElementById("p1").innerHTML+="<br>";            
+                        }        
+                    break;
+                    case 5:
+                            for(r=1;r<=5;r++)
+                        {
+                            for(c=1;c<=5;c++)
+                            {
+                                  document.getElementById("p1").innerHTML+= "* ";
+                            }
+                            document.getElementById("p1").innerHTML+="<br>";            
+                        }        
+                    break;
+                    case 6:
+                            for(r=1;r<=5;r++)
+                        {
+                            for(c=1;c<=r;c++)
+                            {
+                                  document.getElementById("p1").innerHTML+= "* ";
+                            }
+                            document.getElementById("p1").innerHTML+="<br>";            
+                        }        
+                    break;
+
+                    case 7:
+                            for(r=5;r>=1;r--)
+                        {
+                            for(c=1;c<=r;c++)
+                            {
+                                  document.getElementById("p1").innerHTML+= "* ";
+                            }
+                            document.getElementById("p1").innerHTML+="<br>";            
+                        }        
+                    break;
+                default:
+                    break;
+            }
+            
+        }
+       
+    </script>
+</head>
+<body>
+    <input type="button" value="show printDigits" onclick="printDigits(1)">
+    <input type="button" value="2" onclick="printDigits(2)">
+    <input type="button" value="3" onclick="printDigits(3)">
+    <input type="button" value="4" onclick="printDigits(4)">
+    <input type="button" value="5" onclick="printDigits(5)">
+    <input type="button" value="6" onclick="printDigits(6)">
+    <input type="button" value="7" onclick="printDigits(7)">
+    <p id="p1"></p>
+</body>
+</html>

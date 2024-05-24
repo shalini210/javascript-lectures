@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function checkEligibility()
+{
+    var age = parseInt(document.getElementById("txtage").value);
+    if(age>=18)
+    {
+        if(age<125)
+        {
+        document.getElementById("hresult").innerHTML="You are eligible to vote";
+        }
+        else
+        {
+            document.getElementById("hresult").innerHTML="Invalid age";
+        }
+    }
+    else
+    {
+        if(age>0)
+        {
+        document.getElementById("hresult").innerHTML="You are not eligible to vote";
+        }
+        else{
+            document.getElementById("hresult").innerHTML="Invalid age";
+        }
+    }
+}
+    </script>
+</head>
+<body>
+    <p>Enter age :
+        <input type="text" id="txtage"/>
+    </p>
+    <input type="button" value="Check" onclick="checkEligibility()">
+    
+    <h2 id="hresult"></h2>
+</body>
+</html>

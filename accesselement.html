@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hello()
+        {
+          var a,b,c;
+        //   a="Anil"  ;
+        a = document.getElementById("txt1").value;
+        b = document.getElementById("txt2").value;
+        c= parseInt(a) + parseInt(b);
+        document.getElementById("hresult").innerHTML="sum is " + c;
+        }
+        
+    </script>
+</head>
+<body>
+    <p>
+        Enter a : 
+        <input type="text" id="txt1"/> 
+    </p>
+    <p>
+        Enter b : 
+        <input type="text" id="txt2"/> 
+    </p>
+    <input type="button" value="ADD" onclick="hello();">
+    <input type="button" value="-" onclick="sub();">
+    <h1 id="hresult">      </h1>
+    
+</body>
+</html>

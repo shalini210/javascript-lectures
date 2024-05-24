@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showNumbers()
+        {
+            var i=1;
+            while(i<=10)
+            {
+              document.getElementById("p1").innerHTML += i+ "<br>";
+              i++;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Eg1 : show numbers up to the number entered by user</h1>
+    <p>Enter any no :
+        <input type="text">
+    </p>
+    <input type="button" value="show numbers" onclick="showNumbers();"/>
+    <p id="p1"></p>
+
+    <hr>    <h1>Eg2:show numbers between the numbers entered by user :
+        check condition that start no should be less than end no 
+    </h1>
+    <p>Enter start no :
+        <input type="text">
+    </p>
+    <p>Enter end number no :
+        <input type="text">
+    </p>
+    <input type="button" value="show numbers" onclick="showNumbers();"/>
+    <p id="p1"></p>
+
+    <hr>
+    <h1>
+       EG3: print all even no between 1-50
+    </h1>
+    <hr>
+    <h1>
+       EG4: print all odd no between 1-50
+    </h1>
+    <hr>
+    <h1>
+       EG5: print all even no between 1 and no given by user 
+    </h1>
+    <h1>
+        EG6: print all odd no between 1 and no given by user 
+     </h1>
+     <h1>
+        EG7: print all the no which are divisible by both 3 and 5 between 1-100
+     </h1>
+</body> 
+</html>
