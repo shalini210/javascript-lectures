@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Marks()
+        {
+
+            Marksarray=[9,8,6,7,5];
+            newmarks = [];
+            document.getElementById("presult").innerHTML="";
+            for(var i =0;i<Marksarray.length;i++)
+            {
+                newmarks[i]=Marksarray[i] +  (Marksarray[i]*(.1));
+                document.getElementById("presult").innerHTML+="<br>old marks: "+ Marksarray[i]+" New Marks : "+newmarks[i];
+            }
+        }
+    </script>
+</head>
+<body onload="Marks()">
+    
+    <p id="presult"></p>
+
+</body>
+</html>

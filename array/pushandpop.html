@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [];
+        function ShowSalaries()
+        {
+            arr.push(document.getElementById("txt1").value)
+            console.log(arr);
+            document.getElementById("presult").innerHTML="";
+            for(var i = 0; i<arr.length;i++)
+            {
+                document.getElementById("presult").innerHTML+="<br>"+ arr[i];
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Enter Salary:
+        <input type="text" id="txt1">
+        <input type="button" value="Add" onclick="ShowSalaries();">
+    </p>
+    <p id="presult">
+
+    </p>
+</body>
+</html>
