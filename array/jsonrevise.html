@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var Employees = [];
+        function addEmployee()
+        {                
+            var Employee ={}  //"Sname":"","age":0,"address":""
+            Employee.id = document.getElementById("txtid").value;
+            Employee.name = document.getElementById("txtname").value;
+            Employee.dept = document.getElementById("txtdept").value;
+            Employee.salary = document.getElementById("txtsalary").value;
+            // console.log(Employee)
+            Employees.push(Employee);
+            console.log(Employees)
+            empty();   
+            document.getElementById("dtable").innerHTML="";
+            for(var i=0;i<Employees.length;i++)           
+            {
+                
+                row ="<tr> <td>" +Employees[i].id + "</td><td>  " +Employees[i].name +
+                "</td><td> "+Employees[i].salary+" </td><td> "+Employees[i].dept+"</td></tr>";
+                document.getElementById("dtable").innerHTML=row;
+            }
+        }
+        function empty()
+        {
+            document.getElementById("txtid").value="";
+             document.getElementById("txtname").value="";
+             document.getElementById("txtdept").value="";
+             document.getElementById("txtsalary").value="";
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Enter ID : <input type="text" id="txtid">
+    </p>
+    <p>
+        Enter NAme : <input type="text" id="txtname">
+    </p>
+    <p>
+        Enter salary :
+        <input type="text" id="txtsalary">
+    </p>
+    <p>
+        Enter Department : 
+        <input type="text" id="txtdept">
+    </p>
+    <input type="button" value="click here " onclick="addEmployee();">:
+    <table border="1" id="dtable">
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showdata()
+        {
+            document.getElementById("presult").innerHTML="";
+            // var student = {"name":"Raj","course":"Webdesign","age":20};
+            var students = [
+                {"name":"a","age":12},
+                {"name":"b","age":13},
+                {"name":"c","age":32},
+                {"name":"d","age":22},
+                {"name":"e","age":24},
+            ]
+            for(i=0;i<students.length;i++)
+            {
+                document.getElementById("presult").innerHTML += students[i].name +" &nbsp"+students[i].age+"<br>";
+            }
+            // console.log("student Name : "+ student.name);
+            // console.log("student course : "+ student.course);
+            // console.log("student age : "+ student.age);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="show data" onclick="showdata();"/>
+     <p id="presult">
+
+     </p>
+</body>
+</html>
