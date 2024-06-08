@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= ghh, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var students = [];
+        function showData()
+        {
+            console.log(document.getElementById("ctype").value)
+            var para = document.getElementById("presult");
+            para.innerHTML="";
+var name = document.getElementById("txtname").value;
+var age = document.getElementById("txtage").value;
+var student = {"StudentName":name,"age":age};
+students.push(student);
+// console.log(students);
+for(var i = 0 ;i<students.length;i++)
+{
+    para.innerHTML+= students[i].StudentName +
+    " &nbsp&nbsp"+ students[i].age+"<br>";                
+}
+document.getElementById("txtname").value="";
+document.getElementById("txtage").value="";
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <p>
+            Enter Name : 
+            <input type="text" id="txtname">
+        </p>
+        <p>
+            Enter age : 
+            <input type="text" id="txtage">
+        </p>
+        <p>
+            <select id="ctype">
+                <option value="EV">EV</option>
+                <option value="Petrol">Petrol</option>
+                <option value="diesel">diesel</option>
+                <option value="CNG">CNG</option>
+            </select>
+        </p>
+        <input type="button" value="click here " 
+        onclick="showData();"/>
+        <p id="presult"></p>
+    </div>
+</body>
+</html>
