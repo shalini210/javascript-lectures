@@ -29,19 +29,44 @@ let fname = document.getElementById("txtname").value;
 let sem = document.getElementById("ddlsem").value;
 var student  = {"fname":fname,"sem":sem};
 students.push(student);    
-        
-for(let i=0;i<students.length;i++)
-{
-let tr = document.createElement("tr");
-let tdfname = document.createElement("td");
-let tdsem = document.createElement("td");
-tdfname.innerHTML =students[i].fname;
-tr.appendChild(tdfname);
-tdsem.innerHTML =students[i].sem;
-tr.appendChild(tdsem);
-document.getElementById("tbldata").appendChild(tr);
-}
+showData();
         }
+    function deleteItem(fname)
+    {
+        alert("delete button clicked of student " +fname);
+    }
+
+    function showData()
+    {
+        let tbdy = document.getElementById("tbdy")
+        document.getElementById("tbldata").removeChild(tbdy);  
+        tbdy =document.createElement("tbody");
+        tbdy.setAttribute("id","tbdy");
+        document.getElementById("tbldata").appendChild(tbdy)     
+
+        for(let i=0;i<students.length;i++)
+        {
+        let tr = document.createElement("tr");
+        let tdfname = document.createElement("td");
+        let tdsem = document.createElement("td");
+
+
+        tdfname.innerHTML =students[i].fname;
+        tr.appendChild(tdfname);
+        tdsem.innerHTML =students[i].sem;
+        tr.appendChild(tdsem);
+        let btn = document.createElement("input");
+        btn.setAttribute("type","button");
+        btn.setAttribute("value","delete");
+
+        btn.addEventListener("click",()=>deleteItem(students[i].fname));
+
+        let tdbtn = document.createElement("td")
+        tdbtn.appendChild(btn);
+        tr.appendChild(tdbtn)
+        document.getElementById("tbdy").appendChild(tr);
+}
+    }
     </script>
 </head>
 <body>
@@ -61,14 +86,13 @@ document.getElementById("tbldata").appendChild(tr);
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Semester</th>
+                <th>Semester</th><th>
+                    Delete
+                </th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>Raman</td>
-                <td>sem 1 </td>
-            </tr>
+        <tbody id="tbdy">
+          
         </tbody>
     </table>
 </body>
