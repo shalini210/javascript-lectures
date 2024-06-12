@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showData()
+        {
+            let marks = [12,45,25,36];
+            let newmarks = [];
+            let users = ["Ram","Maria","Sonia"];
+            newmarks = marks.map((m) => 
+            {
+             return   m+(m*0.1)
+            })
+            let welcome_users  = users.map((u)=>"<h2>welcome "+u+"</h2>")
+            console.log(welcome_users)
+            document.getElementById("dresult").innerHTML=welcome_users
+                      console.log(marks);
+            console.log("-----------------");
+            console.log(newmarks);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Show" onclick="showData();">
+    <div id="dresult">
+
+    </div>
+</body>
+</html>
