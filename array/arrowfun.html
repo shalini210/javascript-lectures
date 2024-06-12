@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hello(uname)
+        {
+document.getElementById("hresult").innerHTML = uname+" hello from normal fun";
+        }
+
+        const hi =(uname) =>
+    {
+        document.getElementById("hresult").innerHTML =uname+ " hii from arrow fun";        
+    }
+    const add= (a,b)=>
+    {
+        document.getElementById("hresult").innerHTML ="sum is "  +(a+b);
+    }
+    </script>
+</head>
+<body>
+    <input type="button" value="Click here " onclick="hello('Ram');">
+    <input type="button" value="Click here " onclick="hi('Raman');">
+    <input type="button" value="Sum " onclick="add(12,1)">
+<h1 id="hresult"></h1>
+</body>
+</html>
