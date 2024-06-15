@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show()
+        {
+            var msg = "    John is a business man";
+            var result1;
+            result1 = msg.includes("man") ;
+            result1 = msg.charAt(5) //character at the index 2 of string msg 
+            result1=msg.endsWith("man");
+            console.log(msg)
+            result1=msg.trimStart();
+            console.log(result1)
+            result1= msg.repeat(5);
+            result1=msg.replace("is","was")
+            
+            document.getElementById("data").innerHTML=result1;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="click here " onclick="show();">
+<div id="data">
+
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showData()
+        {
+            var cities = ["Delhi","Ahmedabad","Nagpur","ujjain","Agra"];
+            cities = cities.filter((c)=>c.length>5);
+            console.log(cities);
+            let msgs = cities.map((c)=> "<h1>Qualified city : "+c+"</h1>").join('');
+            console.log(msgs);
+            document.getElementById("data").innerHTML=msgs
+            //output should be 
+            // qualified city : Ahmedabad
+            // qualified city : Nagpur
+            // qualified city : ujjain
+                       
+            
+                      // var arry = [24,25,12,36,45,21,14];
+            // var passarray=arry.filter((x)=> x>24);
+            // console.log(arry);
+            // console.log(passarray)
+            
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="click here " onclick="showData();" >
+    <div id="data">
+
+    </div>
+</body>
+</html>

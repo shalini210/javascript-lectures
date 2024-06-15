@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function studentsData()
+        {
+var student ={"name":"John","address":"Surat","age":21};
+console.log(student.name);
+console.log(student.age)
+var teacher ={};
+teacher.name="Maria";
+teacher.qualification="Btech"
+teacher.exp =12;
+console.log(teacher)
+document.getElementById("presult").innerHTML= JSON.stringify(teacher)
+var x ='{"name":"Maria","qualification":"Btech","exp":12}'
+var t = JSON.parse(x);
+console.log("This is from x " + x.name)
+console.log("this is fromt t "+ t.name)
+        }
+</script>
+</head>
+<body onload="studentsData()">
+        <p id="presult">
+        </p>
+</body>
+</html>

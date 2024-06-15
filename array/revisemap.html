@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showdata()
+        {
+            var arry = [10,12,14,18];
+            var newarry = [];
+           newarry=  arry.map((m)=>"<h1>"+ ( m+ (m*0.1)) +"</h1>").join(' ')
+            console.log(arry);
+            console.log(newarry);
+            document.getElementById("dresult").innerHTML=newarry;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="show" onclick="showdata();">
+    <div id="dresult">
+
+    </div>
+</body>
+</html>

@@ -17,13 +17,12 @@
                 {"name":"d","age":22},
                 {"name":"e","age":24},
             ]
+            var studentsupdate=[];
             for(i=0;i<students.length;i++)
-            {
-                document.getElementById("presult").innerHTML += students[i].name +" &nbsp"+students[i].age+"<br>";
+            {                
+               studentsupdate.push(students[i].name +" &nbsp"+students[i].age+"<br>");
             }
-            // console.log("student Name : "+ student.name);
-            // console.log("student course : "+ student.course);
-            // console.log("student age : "+ student.age);
+           document.getElementById("presult").innerHTML = studentsupdate;
         }
     </script>
 </head>

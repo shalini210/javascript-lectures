@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var students=[];
+        function AddData()
+        {
+            var txtname = document.getElementById("txtname");
+            var txtage=document.getElementById("txtage")
+            var name = txtname.value;
+            var age = parseInt(txtage.value);
+            var student = {"name":name,"age":age}
+            students.push(student)
+            console.log(students)
+
+            txtname.value="";
+            txtage.value=""
+
+            showData()
+            // document.getElementById("pdata").innerHTML=JSON.stringify(student);
+        }
+        function showData()
+        {
+          var studentdata =   students.map((s)=>
+            {
+                return s.name +" &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp "+ s.age +"<br>";
+            })
+            document.getElementById("data").innerHTML=studentdata;
+        }
+
+        function showDataMarks()
+        {
+            var marks = [21,25,14,13];
+
+            var newmarks =  marks.map((m)=>
+            {
+                  return "<h4>"+ m + (m*.1)+"</h4>"
+            })
+            console.log(newmarks)
+            document.getElementById("data").innerHTML = newmarks
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Enter NAme" id="txtname">
+    <input type="text" placeholder="Enter age" id="txtage">
+    <input type="button" value="Add" onclick="AddData()">
+
+    <input type="button" value="revise" onclick="showDataMarks()">
+    <div id="data">
+
+    </div>
+    
+</body>
+</html>
