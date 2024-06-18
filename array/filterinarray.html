@@ -8,12 +8,12 @@
     <script>
         function showData()
         {
-            var cities = ["Delhi","Ahmedabad","Nagpur","ujjain","Agra"];
-            cities = cities.filter((c)=>c.length>5);
-            console.log(cities);
-            let msgs = cities.map((c)=> "<h1>Qualified city : "+c+"</h1>").join('');
-            console.log(msgs);
-            document.getElementById("data").innerHTML=msgs
+var cities = ["Delhi","Ahmedabad","Nagpur","ujjain","Agra"];
+cities = cities.filter((c)=>c.length>5);
+console.log(cities);
+let msgs = cities.map((c)=> "<h1>Qualified city : "+c+"</h1>").join('');
+console.log(msgs);
+document.getElementById("data").innerHTML=msgs
             //output should be 
             // qualified city : Ahmedabad
             // qualified city : Nagpur
